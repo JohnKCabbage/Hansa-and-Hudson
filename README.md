@@ -1,8 +1,6 @@
 # Defense Market Signal Brief
 
-This is a fast, professional, defense-analytics-adjacent project you can ship to GitHub.
-
-It takes a military spending snapshot, computes growth/burden/market-share metrics, and produces a scored country market map plus an executive brief.
+Military spending snapshot, computes growth/burden/market-share metrics, and produces a scored country market map plus an executive brief.
 
 ## Skills this showcases
 - Data wrangling and metric engineering
