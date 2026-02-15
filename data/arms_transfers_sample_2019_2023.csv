@@ -1,0 +1,40 @@
+exporter,importer,region,tiv,system_family,interoperability_tag
+United States,Poland,Europe,8600,F-35 Patriot HIMARS,NATO_standard
+United States,Romania,Europe,4100,Patriot HIMARS,NATO_standard
+United States,Finland,Europe,2600,F-35,NATO_standard
+United States,Japan,Asia-Pacific,3900,F-35 Aegis,US_allied
+United States,South Korea,Asia-Pacific,2300,Missile defense,US_allied
+United States,Saudi Arabia,Middle East,9800,Air defense aircraft,US_partner
+United States,Qatar,Middle East,3200,F-15 Apache,US_partner
+United States,Australia,Asia-Pacific,3000,Submarine missile tech,US_allied
+United States,Norway,Europe,1200,F-35,NATO_standard
+United States,Netherlands,Europe,1100,F-35,NATO_standard
+France,India,Asia-Pacific,7200,Rafale submarines,Mixed
+France,Qatar,Middle East,2200,Rafale,Mixed
+France,Egypt,Middle East,1900,Rafale frigates,Mixed
+France,Greece,Europe,2500,Rafale frigates,NATO_standard
+France,United Arab Emirates,Middle East,5400,Rafale,Mixed
+Russia,India,Asia-Pacific,3500,S-400 Su-30,Russian_standard
+Russia,China,Asia-Pacific,1800,Engines air defense,Russian_standard
+Russia,Algeria,Africa,2700,Fighters tanks,Russian_standard
+Russia,Egypt,Middle East,1400,Helicopters air defense,Russian_standard
+Russia,Vietnam,Asia-Pacific,1200,Missiles naval,Russian_standard
+Russia,Armenia,Europe,900,Air defense artillery,Russian_standard
+China,Pakistan,Asia-Pacific,4300,JF-17 frigates,Chinese_standard
+China,Bangladesh,Asia-Pacific,1300,Frigates tanks,Chinese_standard
+China,Thailand,Asia-Pacific,900,Submarine systems,Chinese_standard
+China,Nigeria,Africa,1100,UAVs armor,Chinese_standard
+China,Algeria,Africa,900,UAVs frigates,Chinese_standard
+China,Serbia,Europe,700,HQ-22 UAV,Chinese_standard
+China,Venezuela,South America,800,Air defense armored,Chinese_standard
+China,Ecuador,South America,450,UAV radar,Chinese_standard
+China,Bolivia,South America,240,Transport aircraft,Chinese_standard
+Germany,Ukraine,Europe,1700,Air defense armor,NATO_standard
+Germany,Israel,Middle East,600,Submarine components,Mixed
+Israel,India,Asia-Pacific,1900,UAV missile defense,Mixed
+Israel,Azerbaijan,Europe,1600,UAV loitering munitions,Mixed
+Turkey,Qatar,Middle East,650,UAV armored vehicles,Mixed
+Turkey,Pakistan,Asia-Pacific,500,Corvettes,Mixed
+South Korea,Poland,Europe,3300,K2 K9 FA-50,NATO_bridge
+Italy,Qatar,Middle East,700,Naval helicopters,Mixed
+United Kingdom,Ukraine,Europe,900,Missiles artillery,NATO_standard

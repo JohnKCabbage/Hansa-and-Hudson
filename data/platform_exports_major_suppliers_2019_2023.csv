@@ -1,0 +1,131 @@
+supplier,recipient,platform,category,units,scale_tag
+United States,Poland,F-35A,Combat Aircraft,32,large
+United States,Finland,F-35A,Combat Aircraft,64,large
+United States,Japan,F-35A,Combat Aircraft,105,large
+United States,South Korea,F-35A,Combat Aircraft,40,large
+United States,Belgium,F-35A,Combat Aircraft,34,large
+United States,Netherlands,F-35A,Combat Aircraft,52,large
+United States,Norway,F-35A,Combat Aircraft,52,large
+United States,Denmark,F-35A,Combat Aircraft,27,medium
+United States,Italy,F-35A,Combat Aircraft,90,large
+United States,Israel,F-35I Adir,Combat Aircraft,39,large
+United States,Singapore,F-35B,Combat Aircraft,12,medium
+United States,Australia,F-35A,Combat Aircraft,72,large
+United States,Poland,Patriot PAC-3,Air Defense,8,large
+United States,Romania,Patriot PAC-3,Air Defense,7,large
+United States,Saudi Arabia,Patriot PAC-3,Air Defense,26,large
+United States,United Arab Emirates,Patriot PAC-3,Air Defense,9,large
+United States,Sweden,Patriot PAC-3,Air Defense,4,medium
+United States,Germany,Patriot PAC-3 MSE,Air Defense,8,large
+United States,Poland,HIMARS,Artillery,486,large
+United States,Romania,HIMARS,Artillery,54,large
+United States,Jordan,HIMARS,Artillery,12,medium
+United States,Morocco,HIMARS,Artillery,18,medium
+United States,Estonia,HIMARS,Artillery,6,medium
+United States,Latvia,HIMARS,Artillery,6,medium
+United States,Lithuania,HIMARS,Artillery,8,medium
+United States,Taiwan,HIMARS,Artillery,29,large
+United States,Australia,M1A2 Abrams,Armor,75,large
+United States,Poland,M1A2 Abrams,Armor,366,large
+United States,Taiwan,M1A2 Abrams,Armor,108,large
+United States,India,AH-64E Apache,Helicopter,28,medium
+United States,Qatar,AH-64E Apache,Helicopter,24,medium
+United States,United Kingdom,AH-64E Apache,Helicopter,50,large
+United States,Indonesia,AH-64E Apache,Helicopter,8,medium
+United States,Australia,C-130J,Transport Aircraft,20,medium
+United States,France,C-130J,Transport Aircraft,4,medium
+United States,Germany,CH-47F,Helicopter,60,large
+United States,Spain,CH-47F,Helicopter,17,medium
+United States,Israel,KC-46A,Support Aircraft,8,medium
+United States,Japan,E-2D Hawkeye,AEW,18,medium
+United States,France,MQ-9 Reaper,UAV,12,medium
+United States,United Kingdom,MQ-9 Reaper,UAV,16,medium
+United States,India,P-8I,Maritime Patrol,12,medium
+United States,Australia,P-8A,Maritime Patrol,14,medium
+United States,South Korea,P-8A,Maritime Patrol,6,medium
+Russia,India,S-400,Air Defense,5,large
+Russia,China,S-400,Air Defense,2,medium
+Russia,Turkey,S-400,Air Defense,2,medium
+Russia,Belarus,S-400,Air Defense,2,medium
+Russia,India,Su-30MKI,Combat Aircraft,272,large
+Russia,Algeria,Su-30MKA,Combat Aircraft,58,large
+Russia,Vietnam,Su-30MK2,Combat Aircraft,36,large
+Russia,Egypt,MiG-29M,Combat Aircraft,46,large
+Russia,Serbia,MiG-29,Combat Aircraft,14,medium
+Russia,Myanmar,Su-30SME,Combat Aircraft,6,medium
+Russia,Kazakhstan,Su-30SM,Combat Aircraft,24,medium
+Russia,Armenia,Su-30SM,Combat Aircraft,4,medium
+Russia,Algeria,T-90SA,Armor,300,large
+Russia,India,T-90S,Armor,464,large
+Russia,Iraq,T-90S/SK,Armor,73,large
+Russia,Azerbaijan,T-90S,Armor,100,large
+Russia,Turkmenistan,T-90S,Armor,40,medium
+Russia,Vietnam,Kilo-class Submarine,Naval,6,large
+Russia,Algeria,Kilo-class Submarine,Naval,4,medium
+Russia,China,Sovremenny-class Destroyer,Naval,4,medium
+Russia,Egypt,Ka-52,Helicopter,46,large
+Russia,India,Mi-17V5,Helicopter,151,large
+Russia,Peru,Mi-171Sh,Helicopter,24,medium
+Russia,Mexico,Mi-17,Helicopter,24,medium
+Russia,Myanmar,Yak-130,Trainer Aircraft,18,medium
+Russia,Bangladesh,Yak-130,Trainer Aircraft,16,medium
+Russia,Laos,Yak-130,Trainer Aircraft,10,medium
+Russia,Belarus,Iskander-E,Missile,12,medium
+Russia,Armenia,Iskander-E,Missile,4,medium
+Russia,India,BrahMos Coastal Battery,Missile,5,medium
+France,India,Rafale EH/DH,Combat Aircraft,36,large
+France,Qatar,Rafale DQ/EQ,Combat Aircraft,36,large
+France,Egypt,Rafale EM/DM,Combat Aircraft,54,large
+France,Greece,Rafale F3R,Combat Aircraft,24,medium
+France,United Arab Emirates,Rafale F4,Combat Aircraft,80,large
+France,Croatia,Rafale F3R,Combat Aircraft,12,medium
+France,Indonesia,Rafale F4,Combat Aircraft,42,large
+France,India,Scorpene-class Submarine,Naval,6,large
+France,Brazil,Scorpene-derived Submarine,Naval,4,medium
+France,Malaysia,Scorpene-class Submarine,Naval,2,medium
+France,Egypt,Gowind Corvette,Naval,4,medium
+France,United Arab Emirates,Gowind Corvette,Naval,2,medium
+France,Argentina,OPV 87,Naval,4,medium
+France,Indonesia,CAESAR,Artillery,55,large
+France,Czech Republic,CAESAR,Artillery,62,large
+France,Lithuania,CAESAR,Artillery,18,medium
+France,Belgium,CAESAR,Artillery,28,medium
+France,Armenia,CAESAR,Artillery,36,large
+France,India,MICA Missile,Missile,490,large
+France,Qatar,NH90 Helicopter,Helicopter,28,medium
+France,Australia,NH90 Helicopter,Helicopter,47,large
+France,Kuwait,H225M Caracal,Helicopter,30,medium
+France,Saudi Arabia,H145M,Helicopter,20,medium
+France,Egypt,FREMM Frigate,Naval,2,medium
+France,Greece,FREMM/Belharra Frigate,Naval,3,medium
+China,Pakistan,JF-17 Block III,Combat Aircraft,50,large
+China,Nigeria,JF-17,Combat Aircraft,3,medium
+China,Myanmar,JF-17,Combat Aircraft,16,medium
+China,Azerbaijan,JF-17 Block III,Combat Aircraft,16,medium
+China,Argentina,JF-17 offer package,Combat Aircraft,12,medium
+China,Pakistan,Type 054A/P Frigate,Naval,4,medium
+China,Bangladesh,Type 056 Corvette,Naval,4,medium
+China,Thailand,S26T Submarine,Naval,1,medium
+China,Algeria,Type 056 Corvette,Naval,3,medium
+China,Nigeria,P18N Offshore Patrol Vessel,Naval,2,medium
+China,Nigeria,VT4 Tank,Armor,35,large
+China,Pakistan,VT4 Tank,Armor,176,large
+China,Thailand,VT4 Tank,Armor,49,large
+China,Morocco,VT1A Tank,Armor,54,large
+China,Tanzania,MBT-2000,Armor,44,medium
+China,Serbia,HQ-22,Air Defense,3,medium
+China,Pakistan,HQ-9/P,Air Defense,6,medium
+China,Turkmenistan,FD-2000,Air Defense,2,medium
+China,Uzbekistan,FM-90,Air Defense,12,medium
+China,United Arab Emirates,Wing Loong II,UAV,20,medium
+China,Egypt,Wing Loong I,UAV,32,large
+China,Iraq,CH-4,UAV,20,medium
+China,Algeria,CH-4,UAV,24,medium
+China,Jordan,CH-4,UAV,12,medium
+China,Ethiopia,CH-4,UAV,8,medium
+China,Saudi Arabia,Wing Loong II,UAV,40,large
+China,Pakistan,CH-4,UAV,48,large
+China,Venezuela,K-8W,Trainer Aircraft,18,medium
+China,Bolivia,K-8W,Trainer Aircraft,6,medium
+China,Zambia,K-8,Trainer Aircraft,12,medium
+China,Sudan,K-8,Trainer Aircraft,6,medium

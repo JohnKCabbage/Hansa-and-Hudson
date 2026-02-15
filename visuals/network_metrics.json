@@ -1,0 +1,199 @@
+{
+  "exporter_total": {
+    "United States": 39800.0,
+    "France": 19200.0,
+    "Russia": 11500.0,
+    "China": 10690.0,
+    "Israel": 3500.0,
+    "South Korea": 3300.0,
+    "Germany": 2300.0,
+    "Turkey": 1150.0,
+    "United Kingdom": 900.0,
+    "Italy": 700.0
+  },
+  "dependency": {
+    "Poland": {
+      "top_exporter": "United States",
+      "dependency_ratio": 0.723,
+      "total_import_tiv": 11900.0
+    },
+    "Romania": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 4100.0
+    },
+    "Finland": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 2600.0
+    },
+    "Japan": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 3900.0
+    },
+    "South Korea": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 2300.0
+    },
+    "Saudi Arabia": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 9800.0
+    },
+    "Qatar": {
+      "top_exporter": "United States",
+      "dependency_ratio": 0.474,
+      "total_import_tiv": 6750.0
+    },
+    "Australia": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 3000.0
+    },
+    "Norway": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1200.0
+    },
+    "Netherlands": {
+      "top_exporter": "United States",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1100.0
+    },
+    "India": {
+      "top_exporter": "France",
+      "dependency_ratio": 0.571,
+      "total_import_tiv": 12600.0
+    },
+    "Egypt": {
+      "top_exporter": "France",
+      "dependency_ratio": 0.576,
+      "total_import_tiv": 3300.0
+    },
+    "Greece": {
+      "top_exporter": "France",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 2500.0
+    },
+    "United Arab Emirates": {
+      "top_exporter": "France",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 5400.0
+    },
+    "China": {
+      "top_exporter": "Russia",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1800.0
+    },
+    "Algeria": {
+      "top_exporter": "Russia",
+      "dependency_ratio": 0.75,
+      "total_import_tiv": 3600.0
+    },
+    "Vietnam": {
+      "top_exporter": "Russia",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1200.0
+    },
+    "Armenia": {
+      "top_exporter": "Russia",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 900.0
+    },
+    "Pakistan": {
+      "top_exporter": "China",
+      "dependency_ratio": 0.896,
+      "total_import_tiv": 4800.0
+    },
+    "Bangladesh": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1300.0
+    },
+    "Thailand": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 900.0
+    },
+    "Nigeria": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1100.0
+    },
+    "Serbia": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 700.0
+    },
+    "Venezuela": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 800.0
+    },
+    "Ecuador": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 450.0
+    },
+    "Bolivia": {
+      "top_exporter": "China",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 240.0
+    },
+    "Ukraine": {
+      "top_exporter": "Germany",
+      "dependency_ratio": 0.654,
+      "total_import_tiv": 2600.0
+    },
+    "Israel": {
+      "top_exporter": "Germany",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 600.0
+    },
+    "Azerbaijan": {
+      "top_exporter": "Israel",
+      "dependency_ratio": 1.0,
+      "total_import_tiv": 1600.0
+    }
+  },
+  "leverage_rank": {
+    "Qatar": 0.010400718018686429,
+    "Ukraine": 0.01032608695652174,
+    "India": 0.00892162914078675,
+    "Poland": 0.008647586892797321,
+    "Pakistan": 0.007320675899187919,
+    "Azerbaijan": 0.00614472049689441,
+    "Algeria": 0.005336034625344018,
+    "United Arab Emirates": 0.005162760416666668,
+    "Israel": 0.0050905797101449286,
+    "Saudi Arabia": 0.005038735343383585,
+    "Egypt": 0.004948303517512079,
+    "China": 0.004721014492753624,
+    "Bangladesh": 0.004654666761567767,
+    "Greece": 0.0046278211805555565,
+    "Nigeria": 0.004579589823890675,
+    "Vietnam": 0.004536231884057972,
+    "Romania": 0.004531511725293133,
+    "Japan": 0.004513714405360135,
+    "Thailand": 0.004504512886213583,
+    "Venezuela": 0.004466974417375037,
+    "Armenia": 0.0044438405797101455,
+    "Australia": 0.0044336264656616425,
+    "Serbia": 0.0044294359485364905,
+    "Finland": 0.004398031825795646,
+    "South Korea": 0.004371335845896148,
+    "Ecuador": 0.004335589776440125,
+    "Norway": 0.004273450586264657,
+    "Netherlands": 0.004264551926298158,
+    "Bolivia": 0.004256758991879178,
+    "France": 0.0041666666666666675,
+    "Germany": 0.0041666666666666675,
+    "Italy": 0.0041666666666666675,
+    "Russia": 0.0041666666666666675,
+    "Turkey": 0.0041666666666666675,
+    "United Kingdom": 0.0041666666666666675,
+    "United States": 0.0041666666666666675
+  }
+}

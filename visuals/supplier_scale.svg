@@ -1,0 +1,25 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1320' height='640' viewBox='0 0 1320 640'>
+<rect width='100%' height='100%' fill='#0b0f14'/>
+<text x='120' y='48' fill='#e6edf3' font-size='28' font-family='Arial'>Major Supplier Scale and Breadth (2019-2023 platform sample)</text>
+<text x='120' y='76' fill='#8b949e' font-size='14' font-family='Arial'>Orange = units exported | Blue = distinct platforms. Expanded dimensions to avoid clipping.</text>
+<rect x='120' y='180.0' width='95' height='340.0' rx='4' fill='#ffa657'/>
+<rect x='227' y='332.5' width='95' height='187.5' rx='4' fill='#58a6ff'/>
+<text x='118' y='550' fill='#c9d1d9' font-size='15' font-family='Arial'>United States</text>
+<text x='118' y='170.0' fill='#e6edf3' font-size='12' font-family='Arial'>2,146 units</text>
+<text x='227' y='322.5' fill='#e6edf3' font-size='12' font-family='Arial'>15 platforms</text>
+<rect x='440' y='239.3' width='95' height='280.7' rx='4' fill='#ffa657'/>
+<rect x='547' y='270.0' width='95' height='250.0' rx='4' fill='#58a6ff'/>
+<text x='438' y='550' fill='#c9d1d9' font-size='15' font-family='Arial'>Russia</text>
+<text x='438' y='229.3' fill='#e6edf3' font-size='12' font-family='Arial'>1,772 units</text>
+<text x='547' y='260.0' fill='#e6edf3' font-size='12' font-family='Arial'>20 platforms</text>
+<rect x='760' y='341.8' width='95' height='178.2' rx='4' fill='#ffa657'/>
+<rect x='867' y='320.0' width='95' height='200.0' rx='4' fill='#58a6ff'/>
+<text x='758' y='550' fill='#c9d1d9' font-size='15' font-family='Arial'>France</text>
+<text x='758' y='331.8' fill='#e6edf3' font-size='12' font-family='Arial'>1,125 units</text>
+<text x='867' y='310.0' fill='#e6edf3' font-size='12' font-family='Arial'>16 platforms</text>
+<rect x='1080' y='403.1' width='95' height='116.9' rx='4' fill='#ffa657'/>
+<rect x='1187' y='282.5' width='95' height='237.5' rx='4' fill='#58a6ff'/>
+<text x='1078' y='550' fill='#c9d1d9' font-size='15' font-family='Arial'>China</text>
+<text x='1078' y='393.1' fill='#e6edf3' font-size='12' font-family='Arial'>738 units</text>
+<text x='1187' y='272.5' fill='#e6edf3' font-size='12' font-family='Arial'>19 platforms</text>
+</svg>
