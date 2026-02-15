@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Security Dependency Graph</title>
+<style>
+body { font-family: Inter, system-ui, sans-serif; margin: 0; background: #0e1117; color: #e6edf3; }
+.wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; padding: 12px; }
+.panel { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 12px; }
+svg { width: 100%; height: 720px; background: #0b0f14; border-radius: 8px; }
+.node { fill: #58a6ff; stroke: #c9d1d9; stroke-width: 1; }
+.exporter { fill: #ffa657; }
+.edge { stroke: #8b949e; stroke-opacity: 0.5; }
+label, select { font-size: 14px; }
+small { color: #8b949e; }
+</style></head>
+<body>
+<div class='wrap'>
+  <div class='panel'>
+    <h2>Arms Trade Influence Network (2019-2023 sample)</h2>
+    <svg id='graph' viewBox='0 0 840 720'></svg>
+    <p><small>Edge thickness scales with TIV. Remove an exporter to estimate immediate procurement shock.</small></p>
+  </div>
+  <div class='panel'>
+    <h3>Shock Simulator</h3>
+    <label for='exp'>Remove exporter:</label>
+    <select id='exp'></select>
+    <div id='results'></div>
+    <h3>Top exporters by weighted outflow</h3>
+    <ol>
+      
+    </ol>
+  </div>
+</div>
+<script>
+const data = {"nodes": [{"id": "Algeria", "x": 710.0, "y": 360.0}, {"id": "Armenia", "x": 705.59, "y": 403.41}, {"id": "Australia", "x": 692.51, "y": 445.51}, {"id": "Azerbaijan", "x": 671.15, "y": 485.0}, {"id": "Bangladesh", "x": 642.15, "y": 520.7}, {"id": "Bolivia", "x": 606.41, "y": 551.51}, {"id": "China", "x": 565.0, "y": 576.51}, {"id": "Ecuador", "x": 519.19, "y": 594.92}, {"id": "Egypt", "x": 470.36, "y": 606.2}, {"id": "Finland", "x": 420.0, "y": 610.0}, {"id": "France", "x": 369.64, "y": 606.2}, {"id": "Germany", "x": 320.81, "y": 594.92}, {"id": "Greece", "x": 275.0, "y": 576.51}, {"id": "India", "x": 233.59, "y": 551.51}, {"id": "Israel", "x": 197.85, "y": 520.7}, {"id": "Italy", "x": 168.85, "y": 485.0}, {"id": "Japan", "x": 147.49, "y": 445.51}, {"id": "Netherlands", "x": 134.41, "y": 403.41}, {"id": "Nigeria", "x": 130.0, "y": 360.0}, {"id": "Norway", "x": 134.41, "y": 316.59}, {"id": "Pakistan", "x": 147.49, "y": 274.49}, {"id": "Poland", "x": 168.85, "y": 235.0}, {"id": "Qatar", "x": 197.85, "y": 199.3}, {"id": "Romania", "x": 233.59, "y": 168.49}, {"id": "Russia", "x": 275.0, "y": 143.49}, {"id": "Saudi Arabia", "x": 320.81, "y": 125.08}, {"id": "Serbia", "x": 369.64, "y": 113.8}, {"id": "South Korea", "x": 420.0, "y": 110.0}, {"id": "Thailand", "x": 470.36, "y": 113.8}, {"id": "Turkey", "x": 519.19, "y": 125.08}, {"id": "Ukraine", "x": 565.0, "y": 143.49}, {"id": "United Arab Emirates", "x": 606.41, "y": 168.49}, {"id": "United Kingdom", "x": 642.15, "y": 199.3}, {"id": "United States", "x": 671.15, "y": 235.0}, {"id": "Venezuela", "x": 692.51, "y": 274.49}, {"id": "Vietnam", "x": 705.59, "y": 316.59}], "edges": [{"exporter": "United States", "importer": "Poland", "region": "Europe", "tiv": 8600.0, "system_family": "F-35 Patriot HIMARS", "interoperability_tag": "NATO_standard"}, {"exporter": "United States", "importer": "Romania", "region": "Europe", "tiv": 4100.0, "system_family": "Patriot HIMARS", "interoperability_tag": "NATO_standard"}, {"exporter": "United States", "importer": "Finland", "region": "Europe", "tiv": 2600.0, "system_family": "F-35", "interoperability_tag": "NATO_standard"}, {"exporter": "United States", "importer": "Japan", "region": "Asia-Pacific", "tiv": 3900.0, "system_family": "F-35 Aegis", "interoperability_tag": "US_allied"}, {"exporter": "United States", "importer": "South Korea", "region": "Asia-Pacific", "tiv": 2300.0, "system_family": "Missile defense", "interoperability_tag": "US_allied"}, {"exporter": "United States", "importer": "Saudi Arabia", "region": "Middle East", "tiv": 9800.0, "system_family": "Air defense aircraft", "interoperability_tag": "US_partner"}, {"exporter": "United States", "importer": "Qatar", "region": "Middle East", "tiv": 3200.0, "system_family": "F-15 Apache", "interoperability_tag": "US_partner"}, {"exporter": "United States", "importer": "Australia", "region": "Asia-Pacific", "tiv": 3000.0, "system_family": "Submarine missile tech", "interoperability_tag": "US_allied"}, {"exporter": "United States", "importer": "Norway", "region": "Europe", "tiv": 1200.0, "system_family": "F-35", "interoperability_tag": "NATO_standard"}, {"exporter": "United States", "importer": "Netherlands", "region": "Europe", "tiv": 1100.0, "system_family": "F-35", "interoperability_tag": "NATO_standard"}, {"exporter": "France", "importer": "India", "region": "Asia-Pacific", "tiv": 7200.0, "system_family": "Rafale submarines", "interoperability_tag": "Mixed"}, {"exporter": "France", "importer": "Qatar", "region": "Middle East", "tiv": 2200.0, "system_family": "Rafale", "interoperability_tag": "Mixed"}, {"exporter": "France", "importer": "Egypt", "region": "Middle East", "tiv": 1900.0, "system_family": "Rafale frigates", "interoperability_tag": "Mixed"}, {"exporter": "France", "importer": "Greece", "region": "Europe", "tiv": 2500.0, "system_family": "Rafale frigates", "interoperability_tag": "NATO_standard"}, {"exporter": "France", "importer": "United Arab Emirates", "region": "Middle East", "tiv": 5400.0, "system_family": "Rafale", "interoperability_tag": "Mixed"}, {"exporter": "Russia", "importer": "India", "region": "Asia-Pacific", "tiv": 3500.0, "system_family": "S-400 Su-30", "interoperability_tag": "Russian_standard"}, {"exporter": "Russia", "importer": "China", "region": "Asia-Pacific", "tiv": 1800.0, "system_family": "Engines air defense", "interoperability_tag": "Russian_standard"}, {"exporter": "Russia", "importer": "Algeria", "region": "Africa", "tiv": 2700.0, "system_family": "Fighters tanks", "interoperability_tag": "Russian_standard"}, {"exporter": "Russia", "importer": "Egypt", "region": "Middle East", "tiv": 1400.0, "system_family": "Helicopters air defense", "interoperability_tag": "Russian_standard"}, {"exporter": "Russia", "importer": "Vietnam", "region": "Asia-Pacific", "tiv": 1200.0, "system_family": "Missiles naval", "interoperability_tag": "Russian_standard"}, {"exporter": "Russia", "importer": "Armenia", "region": "Europe", "tiv": 900.0, "system_family": "Air defense artillery", "interoperability_tag": "Russian_standard"}, {"exporter": "China", "importer": "Pakistan", "region": "Asia-Pacific", "tiv": 4300.0, "system_family": "JF-17 frigates", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Bangladesh", "region": "Asia-Pacific", "tiv": 1300.0, "system_family": "Frigates tanks", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Thailand", "region": "Asia-Pacific", "tiv": 900.0, "system_family": "Submarine systems", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Nigeria", "region": "Africa", "tiv": 1100.0, "system_family": "UAVs armor", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Algeria", "region": "Africa", "tiv": 900.0, "system_family": "UAVs frigates", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Serbia", "region": "Europe", "tiv": 700.0, "system_family": "HQ-22 UAV", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Venezuela", "region": "South America", "tiv": 800.0, "system_family": "Air defense armored", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Ecuador", "region": "South America", "tiv": 450.0, "system_family": "UAV radar", "interoperability_tag": "Chinese_standard"}, {"exporter": "China", "importer": "Bolivia", "region": "South America", "tiv": 240.0, "system_family": "Transport aircraft", "interoperability_tag": "Chinese_standard"}, {"exporter": "Germany", "importer": "Ukraine", "region": "Europe", "tiv": 1700.0, "system_family": "Air defense armor", "interoperability_tag": "NATO_standard"}, {"exporter": "Germany", "importer": "Israel", "region": "Middle East", "tiv": 600.0, "system_family": "Submarine components", "interoperability_tag": "Mixed"}, {"exporter": "Israel", "importer": "India", "region": "Asia-Pacific", "tiv": 1900.0, "system_family": "UAV missile defense", "interoperability_tag": "Mixed"}, {"exporter": "Israel", "importer": "Azerbaijan", "region": "Europe", "tiv": 1600.0, "system_family": "UAV loitering munitions", "interoperability_tag": "Mixed"}, {"exporter": "Turkey", "importer": "Qatar", "region": "Middle East", "tiv": 650.0, "system_family": "UAV armored vehicles", "interoperability_tag": "Mixed"}, {"exporter": "Turkey", "importer": "Pakistan", "region": "Asia-Pacific", "tiv": 500.0, "system_family": "Corvettes", "interoperability_tag": "Mixed"}, {"exporter": "South Korea", "importer": "Poland", "region": "Europe", "tiv": 3300.0, "system_family": "K2 K9 FA-50", "interoperability_tag": "NATO_bridge"}, {"exporter": "Italy", "importer": "Qatar", "region": "Middle East", "tiv": 700.0, "system_family": "Naval helicopters", "interoperability_tag": "Mixed"}, {"exporter": "United Kingdom", "importer": "Ukraine", "region": "Europe", "tiv": 900.0, "system_family": "Missiles artillery", "interoperability_tag": "NATO_standard"}], "exporters": ["China", "France", "Germany", "Israel", "Italy", "Russia", "South Korea", "Turkey", "United Kingdom", "United States"]};
+const metrics = {"exporter_total": {"United States": 39800.0, "France": 19200.0, "Russia": 11500.0, "China": 10690.0, "Israel": 3500.0, "South Korea": 3300.0, "Germany": 2300.0, "Turkey": 1150.0, "United Kingdom": 900.0, "Italy": 700.0}, "dependency": {"Poland": {"top_exporter": "United States", "dependency_ratio": 0.723, "total_import_tiv": 11900.0}, "Romania": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 4100.0}, "Finland": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 2600.0}, "Japan": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 3900.0}, "South Korea": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 2300.0}, "Saudi Arabia": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 9800.0}, "Qatar": {"top_exporter": "United States", "dependency_ratio": 0.474, "total_import_tiv": 6750.0}, "Australia": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 3000.0}, "Norway": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 1200.0}, "Netherlands": {"top_exporter": "United States", "dependency_ratio": 1.0, "total_import_tiv": 1100.0}, "India": {"top_exporter": "France", "dependency_ratio": 0.571, "total_import_tiv": 12600.0}, "Egypt": {"top_exporter": "France", "dependency_ratio": 0.576, "total_import_tiv": 3300.0}, "Greece": {"top_exporter": "France", "dependency_ratio": 1.0, "total_import_tiv": 2500.0}, "United Arab Emirates": {"top_exporter": "France", "dependency_ratio": 1.0, "total_import_tiv": 5400.0}, "China": {"top_exporter": "Russia", "dependency_ratio": 1.0, "total_import_tiv": 1800.0}, "Algeria": {"top_exporter": "Russia", "dependency_ratio": 0.75, "total_import_tiv": 3600.0}, "Vietnam": {"top_exporter": "Russia", "dependency_ratio": 1.0, "total_import_tiv": 1200.0}, "Armenia": {"top_exporter": "Russia", "dependency_ratio": 1.0, "total_import_tiv": 900.0}, "Pakistan": {"top_exporter": "China", "dependency_ratio": 0.896, "total_import_tiv": 4800.0}, "Bangladesh": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 1300.0}, "Thailand": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 900.0}, "Nigeria": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 1100.0}, "Serbia": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 700.0}, "Venezuela": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 800.0}, "Ecuador": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 450.0}, "Bolivia": {"top_exporter": "China", "dependency_ratio": 1.0, "total_import_tiv": 240.0}, "Ukraine": {"top_exporter": "Germany", "dependency_ratio": 0.654, "total_import_tiv": 2600.0}, "Israel": {"top_exporter": "Germany", "dependency_ratio": 1.0, "total_import_tiv": 600.0}, "Azerbaijan": {"top_exporter": "Israel", "dependency_ratio": 1.0, "total_import_tiv": 1600.0}}, "leverage_rank": {"Qatar": 0.010400718018686429, "Ukraine": 0.01032608695652174, "India": 0.00892162914078675, "Poland": 0.008647586892797321, "Pakistan": 0.007320675899187919, "Azerbaijan": 0.00614472049689441, "Algeria": 0.005336034625344018, "United Arab Emirates": 0.005162760416666668, "Israel": 0.0050905797101449286, "Saudi Arabia": 0.005038735343383585, "Egypt": 0.004948303517512079, "China": 0.004721014492753624, "Bangladesh": 0.004654666761567767, "Greece": 0.0046278211805555565, "Nigeria": 0.004579589823890675, "Vietnam": 0.004536231884057972, "Romania": 0.004531511725293133, "Japan": 0.004513714405360135, "Thailand": 0.004504512886213583, "Venezuela": 0.004466974417375037, "Armenia": 0.0044438405797101455, "Australia": 0.0044336264656616425, "Serbia": 0.0044294359485364905, "Finland": 0.004398031825795646, "South Korea": 0.004371335845896148, "Ecuador": 0.004335589776440125, "Norway": 0.004273450586264657, "Netherlands": 0.004264551926298158, "Bolivia": 0.004256758991879178, "France": 0.0041666666666666675, "Germany": 0.0041666666666666675, "Italy": 0.0041666666666666675, "Russia": 0.0041666666666666675, "Turkey": 0.0041666666666666675, "United Kingdom": 0.0041666666666666675, "United States": 0.0041666666666666675}};
+const svg = document.getElementById('graph');
+const NS = 'http://www.w3.org/2000/svg';
+const exporters = new Set(data.exporters);
+
+function draw(hiddenExporter='') {
+  svg.innerHTML = '';
+  for (const e of data.edges) {
+    if (hiddenExporter && e.exporter === hiddenExporter) continue;
+    const s = data.nodes.find(n => n.id === e.exporter);
+    const t = data.nodes.find(n => n.id === e.importer);
+    const line = document.createElementNS(NS,'line');
+    line.setAttribute('x1', s.x); line.setAttribute('y1', s.y);
+    line.setAttribute('x2', t.x); line.setAttribute('y2', t.y);
+    line.setAttribute('class','edge');
+    line.setAttribute('stroke-width', Math.max(1, e.tiv / 1200));
+    line.appendChild(document.createTitle(`$${e.exporter} → ${e.importer} | TIV ${e.tiv}`));
+    svg.appendChild(line);
+  }
+
+  for (const n of data.nodes) {
+    const g = document.createElementNS(NS,'g');
+    const c = document.createElementNS(NS,'circle');
+    c.setAttribute('cx', n.x); c.setAttribute('cy', n.y);
+    c.setAttribute('r', exporters.has(n.id) ? 8 : 6);
+    c.setAttribute('class', exporters.has(n.id) ? 'node exporter' : 'node');
+    if (n.id === hiddenExporter) c.setAttribute('opacity', '0.2');
+    const title = document.createElementNS(NS,'title');
+    title.textContent = n.id;
+    c.appendChild(title);
+    const t = document.createElementNS(NS,'text');
+    t.setAttribute('x', n.x + 10); t.setAttribute('y', n.y + 4);
+    t.setAttribute('font-size', '11'); t.setAttribute('fill', '#c9d1d9');
+    t.textContent = n.id;
+    g.appendChild(c); g.appendChild(t); svg.appendChild(g);
+  }
+}
+
+function simulate(exporter) {
+  const impacted = [];
+  const importerLoss = {};
+  for (const e of data.edges) {
+    if (!importerLoss[e.importer]) importerLoss[e.importer] = {lost:0,total:0};
+    importerLoss[e.importer].total += e.tiv;
+    if (e.exporter === exporter) importerLoss[e.importer].lost += e.tiv;
+  }
+  Object.entries(importerLoss).forEach(([imp,v]) => {
+    if (v.lost > 0) impacted.push([imp, (v.lost / v.total)]);
+  });
+  impacted.sort((a,b)=>b[1]-a[1]);
+  const top = impacted.slice(0,12).map(x=>`<li>${x[0]}: ${(x[1]*100).toFixed(1)}% import pipeline removed</li>`).join('');
+  document.getElementById('results').innerHTML = `<p><strong>${impacted.length}</strong> importers lose active supply lines.</p><ol>${top}</ol>`;
+}
+
+const sel = document.getElementById('exp');
+for (const e of data.exporters) {
+  const o = document.createElement('option'); o.value=e; o.textContent=e; sel.appendChild(o);
+}
+sel.addEventListener('change', () => { draw(sel.value); simulate(sel.value); });
+sel.value = 'Russia'; draw('Russia'); simulate('Russia');
+</script></body></html>

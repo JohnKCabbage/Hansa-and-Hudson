@@ -56,3 +56,15 @@ All projects are built using **publicly available data and transparent methodolo
 - Assessing **long-cycle fiscal and demographic constraints on military expansion**  
 - Comparing **economic structures for their ability to support prolonged conflict**  
 - Tracking **capital allocation into strategic industries** as a measure of national prioritization  
+
+---
+
+## Featured Analysis
+
+### Arms Trade Influence Network (Security Dependency Graph)
+
+A directed weighted network analysis of arms-transfer dependencies with exporter removal shock testing and strategic interpretation around US/NATO interoperability, Russia's export contraction, and China's regional footprint expansion.
+
+- Article: `reports/arms_trade_influence_network.md`
+- Interactive graph: `visuals/security_dependency_graph.html`
+- Visuals: `visuals/exporter_shift.svg`, `visuals/china_footprint.svg`

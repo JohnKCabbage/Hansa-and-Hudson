@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='920' height='480' viewBox='0 0 920 480'>
+<rect width='100%' height='100%' fill='#0b0f14'/>
+<text x='80' y='40' fill='#e6edf3' font-size='24' font-family='Arial'>Major Exporter TIV Shift: 2014-2018 vs 2019-2023</text>
+<rect x='80' y='194.9' width='70' height='205.1' fill='#58a6ff'/>
+<rect x='158' y='120.0' width='70' height='280.0' fill='#ffa657'/>
+<text x='80' y='422' fill='#c9d1d9' font-size='12' font-family='Arial'>United States</text>
+<text x='80' y='112.0' fill='#e6edf3' font-size='11' font-family='Arial'>+37%</text>
+<rect x='330' y='264.2' width='70' height='135.8' fill='#58a6ff'/>
+<rect x='408' y='336.2' width='70' height='63.8' fill='#ffa657'/>
+<text x='330' y='422' fill='#c9d1d9' font-size='12' font-family='Arial'>Russia</text>
+<text x='330' y='328.2' fill='#e6edf3' font-size='11' font-family='Arial'>-53%</text>
+<rect x='580' y='355.5' width='70' height='44.5' fill='#58a6ff'/>
+<rect x='658' y='348.8' width='70' height='51.2' fill='#ffa657'/>
+<text x='580' y='422' fill='#c9d1d9' font-size='12' font-family='Arial'>China</text>
+<text x='580' y='340.8' fill='#e6edf3' font-size='11' font-family='Arial'>+15%</text>
+<rect x='830' y='344.8' width='70' height='55.2' fill='#58a6ff'/>
+<rect x='908' y='326.5' width='70' height='73.5' fill='#ffa657'/>
+<text x='830' y='422' fill='#c9d1d9' font-size='12' font-family='Arial'>France</text>
+<text x='830' y='318.5' fill='#e6edf3' font-size='11' font-family='Arial'>+33%</text>
+<text x='80' y='450' fill='#8b949e' font-size='12' font-family='Arial'>Blue: 2014-2018 | Orange: 2019-2023 (TIV)</text>
+</svg>

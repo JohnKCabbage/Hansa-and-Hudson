@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='920' height='500' viewBox='0 0 920 500'>
+<rect width='100%' height='100%' fill='#0b0f14'/>
+<text x='80' y='36' fill='#e6edf3' font-size='24' font-family='Arial'>China's Export Footprint Growth (TIV)</text>
+<line x1='80.0' y1='60' x2='80.0' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='68.0' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2014</text>
+<line x1='168.9' y1='60' x2='168.9' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='156.9' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2015</text>
+<line x1='257.8' y1='60' x2='257.8' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='245.8' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2016</text>
+<line x1='346.7' y1='60' x2='346.7' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='334.7' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2017</text>
+<line x1='435.6' y1='60' x2='435.6' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='423.6' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2018</text>
+<line x1='524.4' y1='60' x2='524.4' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='512.4' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2019</text>
+<line x1='613.3' y1='60' x2='613.3' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='601.3' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2020</text>
+<line x1='702.2' y1='60' x2='702.2' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='690.2' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2021</text>
+<line x1='791.1' y1='60' x2='791.1' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='779.1' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2022</text>
+<line x1='880.0' y1='60' x2='880.0' y2='430' stroke='#21262d' stroke-width='1'/>
+<text x='868.0' y='464' fill='#8b949e' font-size='11' font-family='Arial'>2023</text>
+<polyline points='80.0,361.1 168.9,350.3 257.8,342.2 346.7,334.1 435.6,323.3 524.4,312.5 613.3,304.4 702.2,295.0 791.1,284.2 880.0,272.0' fill='none' stroke='#58a6ff' stroke-width='3'/>
+<text x='700' y='60' fill='#58a6ff' font-size='13' font-family='Arial'>Africa</text>
+<polyline points='80.0,430.0 168.9,428.6 257.8,425.3 346.7,421.9 435.6,417.8 524.4,412.4 613.3,407.0 702.2,401.6 791.1,396.2 880.0,388.1' fill='none' stroke='#ffa657' stroke-width='3'/>
+<text x='700' y='85' fill='#ffa657' font-size='13' font-family='Arial'>South America</text>
+<polyline points='80.0,201.8 168.9,181.5 257.8,161.3 346.7,141.0 435.6,120.8 524.4,100.5 613.3,89.7 702.2,78.9 791.1,69.5 880.0,60.0' fill='none' stroke='#3fb950' stroke-width='3'/>
+<text x='700' y='110' fill='#3fb950' font-size='13' font-family='Arial'>Asia Pacific</text>
+</svg>
