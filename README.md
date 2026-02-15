@@ -170,7 +170,7 @@ This is the dependency point: platform concentration + recipient concentration d
 
 ---
 
-## Visualizations (in GitHub)
+## Visualizations
 
 ### Interactive dependency model
 
