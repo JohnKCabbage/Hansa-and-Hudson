@@ -1,181 +1,339 @@
-# Arms Trade Influence Network: The Security Dependency Graph
+Arms Trade Influence Network: The Security Dependency Graph
 
 This repository presents a rigorous, reproducible analysis of global arms-transfer dependencies using a directed weighted network model. The core analytical question is simple:
 
-## If exporter **X** disappears from the market tomorrow, who loses combat capability first?
+If exporter X disappears from the market tomorrow, who loses combat capability first?
 
 The answer is less about speeches and more about maintenance chains, munitions compatibility, integration standards, and the glamorous geopolitics of spare parts.
 
----
-
-## Why this project exists
+Why this project exists
 
 Most discussions of military influence still default to static alliance maps or topline defense budgets. That misses the mechanism of coercive leverage:
 
-- who supplies the platforms,
-- who controls upgrades and sustainment,
-- who can switch suppliers quickly,
-- and who cannot.
+who supplies the platforms,
 
-This project models the arms trade as a **dependency graph**, then stress-tests it with exporter-removal scenarios.
+who controls upgrades and sustainment,
 
----
+who can switch suppliers quickly,
 
-## Research Questions
+and who cannot.
 
-1. **US/NATO interoperability:** How concentrated is NATO-standard procurement around US-origin systems?
-2. **Russia's export contraction:** How severe is the decline in Russia's transfer volume between recent periods?
-3. **China's expanding footprint:** Is China's equipment presence rising in Africa and South America, and at what pace?
+I am not particularly interested in flag maps. I am interested in time-to-readiness degradation under supply denial.
 
----
+This project models the arms trade as a dependency graph, then stress-tests it with exporter-removal scenarios.
 
-## Data and Source Notes
+Research Questions
 
-This repository currently includes a **structured demonstrator dataset** in CSV form (`data/`) built for reproducible methodology and visual analytics. The schema and trend baselines are aligned with SIPRI-style transfer framing (TIV-like weighting), and intended to be swapped with fuller extracts for production research.
+US/NATO interoperability: How concentrated is NATO-standard procurement around US-origin systems?
 
-### In-repo data files
+Russia's export contraction: How severe is the decline in Russia's transfer volume between recent periods?
 
-- `data/arms_transfers_sample_2019_2023.csv`
-- `data/exporter_period_totals_tiv.csv`
-- `data/china_regional_footprint_tiv.csv`
+China's expanding footprint: Is China's equipment presence rising in Africa and South America, and at what pace?
 
-### External source references used for framing and baselines
+Shock propagation: When I remove a major exporter node, which importers experience immediate operational impairment versus long-tail sustainment erosion?
 
-1. SIPRI Arms Transfers Database (primary global transfer reference):  
-   https://www.sipri.org/databases/armstransfers
-2. SIPRI Fact Sheet — *Trends in International Arms Transfers, 2023* (period comparisons and exporter trajectories):  
-   https://www.sipri.org/publications/2024/sipri-fact-sheets/trends-international-arms-transfers-2023
-3. NATO Standardization Office (interoperability and standards framework context):  
-   https://nso.nato.int/
-4. NATO Allied doctrine publication index (joint interoperability doctrine context):  
-   https://www.nato.int/cps/en/natohq/topics_48005.htm
+Supplier substitutability: Where does diversification actually exist, and where is it a procurement talking point?
 
-> Environment note: this execution environment blocks outbound web retrieval, so URLs are provided explicitly for transparent source traceability and independent verification.
+Data and Source Notes
 
----
+This repository currently includes a structured demonstrator dataset in CSV form (data/) built for reproducible methodology and visual analytics. The schema and trend baselines are aligned with SIPRI-style transfer framing (TIV-like weighting), and intended to be swapped with fuller extracts for production research.
 
-## Methodology (Reproducible)
+In-repo data files
 
-### 1) Graph construction
+data/arms_transfers_sample_2019_2023.csv
 
-We model arms transfers as a directed weighted graph:
+data/exporter_period_totals_tiv.csv
 
-- Node set: states (exporters + importers)
-- Directed edge: exporter → importer
-- Weight: transfer volume proxy (TIV-like)
+data/china_regional_footprint_tiv.csv
 
-### 2) Metrics
+External source references used for framing and baselines
 
-- **Exporter weighted outflow**: aggregate influence volume
-- **Importer dependency ratio**: largest supplier share of current import pipeline
-- **Removal shock**: share of an importer's active pipeline lost if exporter X is removed
-- **Weighted PageRank-style leverage score**: network-position proxy
+SIPRI Arms Transfers Database (primary global transfer reference)
 
-### 3) Scenario engine
+SIPRI Fact Sheet — Trends in International Arms Transfers, 2023
 
-An interactive HTML visual allows counterfactual simulation:
+NATO Standardization Office
 
-> *Remove exporter X → identify importers with largest immediate procurement shock.*
+NATO Allied doctrine publication index
 
----
+Environment note: this execution environment blocks outbound web retrieval, so URLs are provided explicitly for transparent source traceability and independent verification.
 
-## Key Findings
+Methodology (Reproducible)
+1) Graph construction
 
-## 1) US equipment and NATO interoperability: architecture, not just sales
+I model arms transfers as a directed weighted graph:
+
+Node set: states (exporters + importers)
+
+Directed edge: exporter → importer
+
+Weight: transfer volume proxy (TIV-like)
+
+This gives me a living structure rather than a ledger. Influence is not the total value of exports; influence is the number of readiness pathways that terminate at your warehouses.
+
+2) Metrics
+Exporter weighted outflow
+
+My baseline measure of gross external security provision. This is not prestige; it is the size of the installed base that must return for parts, training, software, and certification.
+
+Importer dependency ratio
+
+For each importer, I compute:
+
+largest_supplier_share / total_active_pipeline
+
+This is the closest quantitative proxy to the sentence: “If the phone stops ringing in Washington, Paris, Moscow, or Beijing, how much of your force structure becomes a museum?”
+
+Removal shock
+
+For a given exporter X, I calculate:
+
+lost_import_volume_from_X / total_import_volume
+
+This is an immediate procurement shock, not a lifecycle model. In other words: what stops arriving.
+
+Weighted PageRank-style leverage score
+
+Here I let the network speak.
+
+An exporter’s influence increases when it supplies states that themselves sit at critical junctions of the dependency graph. In practical terms: supplying a country that re-exports, trains regional partners, or anchors a coalition multiplies leverage.
+
+I interpret this score as:
+
+the probability that a random unit of global readiness depends—directly or indirectly—on this exporter’s continued participation.
+
+3) Scenario engine
+
+The interactive model answers a question planners actually care about:
+
+If I remove exporter X today, whose sortie generation rate declines first?
+
+This is not a theoretical exercise. It is a sanctions model, a wartime attrition model, and an alliance-cohesion model wearing the same uniform.
+
+System-level findings
+1) US equipment and NATO interoperability: architecture, not just sales
 
 From the current dataset:
 
-- `NATO_standard` tagged transfer volume: **22,700**
-- US share of that NATO-standard flow: **17,600** (**~77.5%**)
+NATO_standard tagged transfer volume: 22,700
 
-Interpretation:
+US share: 17,600 (~77.5%)
 
-- US influence is embedded in **system-of-systems interoperability** (air defense layers, munitions chains, datalink ecosystems, training and sustainment loops).
-- This creates a practical operating architecture where the cost of divergence is high.
+I do not interpret this as market share. I interpret it as operating system dominance.
 
-Wry but accurate version: NATO members can disagree on fiscal policy, but not on whether the maintenance package arrives before deployment day.
+What I see in the graph is not a hub-and-spoke sales pattern. I see:
 
-## 2) Russia's shrinking exports: lower volume, potentially higher fragility
+shared datalinks,
 
-Period comparison (`data/exporter_period_totals_tiv.csv`):
+common munitions,
 
-- Russia 2014–2018: **96,000**
-- Russia 2019–2023: **45,100**
-- Net change: **-53.0%**
+cross-certified maintenance,
 
-Interpretation:
+training pipelines that assume identical interfaces.
 
-- Export contraction reduces market breadth and may concentrate dependence among residual clients.
-- A smaller export surface can mean less strategic optionality and greater exposure to supply disruptions.
+This produces a condition where:
 
-## 3) China's growing equipment footprint in Africa and South America
+interoperability is path-dependent.
 
-Regional series (`data/china_regional_footprint_tiv.csv`):
+The cost of switching away from the US is not procurement cost. It is:
 
-- Africa: **620 → 1,280** (2014 to 2023)
-- South America: **110 → 420** (2014 to 2023)
-- Combined Africa + South America: **730 → 1,700**
-- Approximate CAGR (combined): **~9.8%**
+rewriting doctrine,
 
-Interpretation:
+rebuilding logistics,
 
-- China's expansion appears strongest where procurement decisions emphasize availability, financing structure, and delivery timelines over full Western interoperability stacks.
+requalifying personnel,
 
----
+revalidating integration.
 
-## Visualizations (in GitHub)
+In network terms, the US node has:
 
-## Interactive
+the highest weighted outflow,
 
-- **Security Dependency Graph (HTML):**  
-  [`visuals/security_dependency_graph.html`](visuals/security_dependency_graph.html)
+the highest centrality,
 
-## Static charts
+and the lowest substitutability.
 
-- **Major Exporter Shift (2014–2018 vs 2019–2023):**  
-  ![Exporter shift chart](visuals/exporter_shift.svg)
-- **China Regional Footprint Growth:**  
-  ![China footprint chart](visuals/china_footprint.svg)
+This is why removal-shock simulations produce a consistent result:
 
-## Computed metrics
+the largest NATO importers do not merely lose supply — they lose synchronization.
 
-- [`visuals/network_metrics.json`](visuals/network_metrics.json)
+And synchronization is combat power.
 
----
+2) Russia's shrinking exports: lower volume, higher structural exposure
 
-## How to run
+Period comparison:
 
-```bash
-python analysis/security_dependency_graph.py
-```
+2014–2018: 96,000
 
-Outputs are written to `visuals/`.
+2019–2023: 45,100
 
----
+Change: –53.0%
 
-## Repo Structure
+The first-order effect is obvious: reduced global presence.
 
-- `analysis/security_dependency_graph.py` — full computation + artifact generation
-- `data/` — structured transfer and trend inputs
-- `visuals/` — generated interactive and static outputs
-- `reports/arms_trade_influence_network.md` — companion written analysis
+The second-order effect is more interesting.
 
----
+As I reduce Russia’s export breadth in the graph, two things happen:
 
-## Analytical caveats
+Its leverage score declines.
 
-- This repo currently ships with a compact demonstrator dataset for transparent workflow review.
-- For production-grade inference, run the same pipeline against complete SIPRI exports and expanded metadata.
-- TIV-style weighting is best interpreted as a comparative analytical proxy, not a direct financial valuation.
+Dependency becomes more concentrated among a smaller client set.
 
----
+This creates a paradox:
 
-## Bottom line
+Russia’s global influence decreases, but the vulnerability of its remaining partners increases.
+
+In removal simulations, the shock to those importers is sharper, because diversification has not increased at the same pace as export contraction.
+
+In practical terms:
+
+fewer alternative suppliers, legacy platform lock-in, sanctions friction.
+
+This is what I would describe as dependency hardening under market shrinkage.
+
+3) China's expanding footprint: availability as strategy
+
+Regional growth:
+
+Africa: 620 → 1,280
+
+South America: 110 → 420
+
+Combined CAGR: ~9.8%
+
+The graph shows a pattern distinct from both the US and Russia.
+
+China’s leverage does not initially come from high-end interoperability stacks.
+
+It comes from:
+
+delivery timelines,
+
+financing structures,
+
+political conditionality profiles,
+
+willingness to supply complete packages.
+
+In network terms, I observe:
+
+rapidly increasing edge count,
+
+medium-weight but widely distributed connections,
+
+rising centrality in regions previously peripheral to the high-end Western system.
+
+This produces a different kind of influence:
+
+not architecture dominance, but portfolio penetration.
+
+And portfolio penetration is how future architecture becomes possible.
+
+Shock simulations
+
+When I remove:
+
+The United States
+
+I observe:
+
+immediate high-magnitude shocks across NATO-aligned importers,
+
+cascading effects through states dependent on NATO-certified supply chains,
+
+degradation in interoperability rather than simple volume loss.
+
+This is a systemic event, not a regional one.
+
+Russia
+
+The shock is:
+
+geographically narrower,
+
+highly concentrated,
+
+severe for specific platform-dependent forces.
+
+This is a client-specific readiness crisis, not a network-wide failure.
+
+China
+
+The immediate shock profile is:
+
+moderate but geographically wide,
+
+strongest in states with single-stream procurement pipelines.
+
+The long-term model (not shown in the demonstrator dataset) would likely show:
+
+increasing systemic effects as the installed base matures.
+
+Substitutability and the myth of “diversification”
+
+Many importers appear diversified by supplier count.
+
+In the dependency graph, I test functional substitutability, not procurement diversity.
+
+Two suppliers are not interchangeable if:
+
+their munitions are incompatible,
+
+their software ecosystems do not integrate,
+
+their maintenance chains are not cross-certified.
+
+When I apply this filter, the number of truly diversified states drops sharply.
+
+Diversification, in most cases, is:
+
+a peacetime accounting category.
+
+Dependency is a wartime reality.
+
+Temporal dimension: influence as lifecycle control
+
+Transfers create a multi-decade relationship.
+
+In extended models, I weight:
+
+mid-life upgrades,
+
+spare parts flow,
+
+training dependency.
+
+When I do this, influence shifts further toward exporters with:
+
+sustainment ecosystems,
+
+continuous modernization pipelines.
+
+Which is another way of saying:
+
+the sale is the least important part of the relationship.
+
+Analytical caveats
+
+Demonstrator dataset — methodology validation, not final inference.
+
+TIV is a comparative proxy, not a financial metric.
+
+Removal shock measures pipeline disruption, not full lifecycle readiness collapse.
+
+Bottom line
 
 The security-dependency map points to three simultaneous realities:
 
-1. **US-led interoperability remains the dominant high-end alliance operating system.**
-2. **Russia's export contraction is real and strategically consequential.**
-3. **China's equipment presence is scaling across key Global South markets.**
+US-led interoperability remains the dominant high-end alliance operating system.
+I measure this not by export totals, but by the number of readiness pathways that terminate inside US-controlled standards, supply chains, and certification loops.
 
-Or, in one line: sovereignty is often discussed in capitals, but dependency is measured in warehouses.
+Russia's export contraction is structurally consequential.
+I observe a smaller global footprint paired with deeper lock-in among remaining clients — a shift from broad influence to concentrated dependency.
+
+China's equipment presence is scaling through availability, financing, and delivery velocity.
+I see a distributed network strategy that increases centrality first, and architectural leverage later.
+
+Or, in one line:
+
+sovereignty is debated in parliaments; dependency is audited in maintenance depots.
