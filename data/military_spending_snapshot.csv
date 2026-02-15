@@ -1,0 +1,21 @@
+iso3,country,mil_spend_2014_usd_b,mil_spend_2023_usd_b,gdp_2023_usd_b,nato_member
+USA,United States,610,916,27360,yes
+CHN,China,216,296,17790,no
+RUS,Russia,84,109,2020,no
+IND,India,50,84,3570,no
+SAU,Saudi Arabia,80,75,1110,no
+GBR,United Kingdom,61,75,3340,yes
+DEU,Germany,47,67,4520,yes
+FRA,France,53,61,3050,yes
+JPN,Japan,47,50,4210,no
+KOR,South Korea,36,47,1710,no
+POL,Poland,10,31,840,yes
+AUS,Australia,26,33,1720,no
+ITA,Italy,26,35,2190,yes
+CAN,Canada,20,29,2140,yes
+ISR,Israel,17,27,525,no
+TUR,Turkey,16,24,1110,yes
+UKR,Ukraine,4,65,180,no
+NLD,Netherlands,10,23,1010,yes
+ESP,Spain,12,22,1620,yes
+NOR,Norway,7,10,550,yes
