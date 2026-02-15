@@ -1,4 +1,4 @@
-# Defense Market Signal Brief (2-Minute Portfolio Build)
+# Defense Market Signal Brief
 
 This is a fast, professional, defense-analytics-adjacent project you can ship to GitHub.
 
@@ -24,14 +24,3 @@ python src/defense_market_analysis.py
 ## Outputs
 - `outputs/defense_market_map.csv`
 - `outputs/executive_brief.md`
-
-## Why this is employable
-Instead of reposting obvious facts, this project creates a **decision product**:
-- ranks markets with a transparent scoring model
-- surfaces burden-sharing and growth hotspots
-- translates quant outputs into an executive narrative
-
-## Easy upgrades (if you want to level it up)
-- swap snapshot CSV for SIPRI/World Bank API pulls
-- add sanctions or conflict-event features
-- build a simple Streamlit dashboard on top of the output CSV
