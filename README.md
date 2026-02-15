@@ -1,7 +1,5 @@
 # Arms Trade Influence Network: The Security Dependency Graph
 
-> *Alliances are declarations. Logistics is destiny.*
-
 This repository presents a rigorous, reproducible analysis of global arms-transfer dependencies using a directed weighted network model. The core analytical question is simple:
 
 ## If exporter **X** disappears from the market tomorrow, who loses combat capability first?
